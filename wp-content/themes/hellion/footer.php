@@ -50,8 +50,8 @@
 
 								<!-- About -->
 									<section>
-										<h2><strong>ZeroFour</strong> by HTML5 UP</h2>
-										<p>Hi! This is <strong>ZeroFour</strong>, a free, fully responsive HTML5 site
+										<h2><strong>Hellion</strong> by HTML5 UP</h2>
+										<p>Hi! This is <strong>Hellion</strong>, a free, fully responsive HTML5 site
 										template by <a href="http://twitter.com/ajlkn">AJ</a> for <a href="http://html5up.net/">HTML5 UP</a>.
 										It's <a href="http://html5up.net/license/">Creative Commons Attribution</a>
 										licensed so use it for any personal or commercial project (just credit us
@@ -103,7 +103,7 @@
 						</div>
 					</footer>
 				</div>
-
 		</div>
+    <?php wp_footer(); ?>                                        
 	</body>
 </html>
