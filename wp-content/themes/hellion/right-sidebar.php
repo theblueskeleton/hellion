@@ -9,7 +9,7 @@
 		<title>Right Sidebar - ZeroFour by HTML5 UP</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
+		<?php wp_head(); ?>
 	</head>
 	<body class="right-sidebar is-preload">
 		<div id="page-wrapper">
@@ -23,12 +23,12 @@
 								<div class="inner">
 
 									<!-- Logo -->
-										<h1><a href="index.html" id="logo">ZeroFour</a></h1>
+										<h1><a href="index.php" id="logo">ZeroFour</a></h1>
 
 									<!-- Nav -->
 										<nav id="nav">
 											<ul>
-												<li><a href="index.html">Home</a></li>
+												<li><a href="index.php">Home</a></li>
 												<li>
 													<a href="#">Dropdown</a>
 													<ul>
@@ -46,9 +46,9 @@
 														<li><a href="#">Veroeros feugiat</a></li>
 													</ul>
 												</li>
-												<li><a href="left-sidebar.html">Left Sidebar</a></li>
-												<li class="current_page_item"><a href="right-sidebar.html">Right Sidebar</a></li>
-												<li><a href="no-sidebar.html">No Sidebar</a></li>
+												<li><a href="left-sidebar.php">Left Sidebar</a></li>
+												<li class="current_page_item"><a href="right-sidebar.php">Right Sidebar</a></li>
+												<li><a href="no-sidebar.php">No Sidebar</a></li>
 											</ul>
 										</nav>
 
@@ -75,7 +75,7 @@
 														<p>Which means the sidebar is on the right</p>
 													</header>
 
-													<span class="image featured"><img src="images/pic08.jpg" alt="" /></span>
+													<span class="image featured"><img src="<?php echo get_template_directory_uri(); ?>/images/pic08.jpg" alt="" /></span>
 
 													<p>Phasellus quam turpis, feugiat sit amet ornare in, hendrerit in lectus.
 													Praesent semper mod quis eget mi. Etiam eu ante risus. Aliquam erat volutpat.
@@ -158,7 +158,7 @@
 
 												<!-- Excerpt -->
 													<article class="box excerpt">
-														<a href="#" class="image left"><img src="images/pic04.jpg" alt="" /></a>
+														<a href="#" class="image left"><img src="<?php echo get_template_directory_uri(); ?>/images/pic04.jpg" alt="" /></a>
 														<div>
 															<header>
 																<span class="date">July 24</span>
@@ -172,7 +172,7 @@
 
 												<!-- Excerpt -->
 													<article class="box excerpt">
-														<a href="#" class="image left"><img src="images/pic05.jpg" alt="" /></a>
+														<a href="#" class="image left"><img src="<?php echo get_template_directory_uri(); ?>/images/pic05.jpg" alt="" /></a>
 														<div>
 															<header>
 																<span class="date">July 18</span>
@@ -186,7 +186,7 @@
 
 												<!-- Excerpt -->
 													<article class="box excerpt">
-														<a href="#" class="image left"><img src="images/pic06.jpg" alt="" /></a>
+														<a href="#" class="image left"><img src="<?php echo get_template_directory_uri(); ?>/images/pic06.jpg" alt="" /></a>
 														<div>
 															<header>
 																<span class="date">July 14</span>
@@ -206,7 +206,7 @@
 											<section class="box spotlight">
 												<h2 class="icon fa-file-alt">Spotlight</h2>
 												<article>
-													<a href="#" class="image featured"><img src="images/pic07.jpg" alt=""></a>
+													<a href="#" class="image featured"><img src="<?php echo get_template_directory_uri(); ?>/images/pic07.jpg" alt=""></a>
 													<header>
 														<h3><a href="#">Neural Implants</a></h3>
 														<p>The pros and cons. Mostly cons.</p>
