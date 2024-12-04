@@ -28,7 +28,7 @@
 										</div>
 										<div class="col-4 col-12-medium">
 											<section>
-												<a href="#" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
+												<a href="#" class="image featured"><img src="<?php echo get_template_directory_uri(); ?>/images/pic01.jpg" alt="" /></a>
 												<header class="second icon solid fa-user">
 													<h3>Here's a Heading</h3>
 													<p>And a subtitle</p>
@@ -37,7 +37,7 @@
 										</div>
 										<div class="col-4 col-12-medium">
 											<section>
-												<a href="#" class="image featured"><img src="images/pic02.jpg" alt="" /></a>
+												<a href="#" class="image featured"><img src="<?php echo get_template_directory_uri(); ?>/images/pic02.jpg" alt="" /></a>
 												<header class="second icon solid fa-cog">
 													<h3>Also a Heading</h3>
 													<p>And another subtitle</p>
@@ -46,7 +46,7 @@
 										</div>
 										<div class="col-4 col-12-medium">
 											<section>
-												<a href="#" class="image featured"><img src="images/pic03.jpg" alt="" /></a>
+												<a href="#" class="image featured"><img src="<?php echo get_template_directory_uri(); ?>/images/pic03.jpg" alt="" /></a>
 												<header class="second icon solid fa-chart-bar">
 													<h3>Another Heading</h3>
 													<p>And yes, a subtitle</p>
@@ -117,7 +117,7 @@
 
 												<!-- Excerpt -->
 													<article class="box excerpt">
-														<a href="#" class="image left"><img src="images/pic04.jpg" alt="" /></a>
+														<a href="#" class="image left"><img src="<?php echo get_template_directory_uri(); ?>/images/pic04.jpg" alt="" /></a>
 														<div>
 															<header>
 																<span class="date">July 24</span>
@@ -131,7 +131,7 @@
 
 												<!-- Excerpt -->
 													<article class="box excerpt">
-														<a href="#" class="image left"><img src="images/pic05.jpg" alt="" /></a>
+														<a href="#" class="image left"><img src="<?php echo get_template_directory_uri(); ?>/images/pic05.jpg" alt="" /></a>
 														<div>
 															<header>
 																<span class="date">July 18</span>
@@ -145,7 +145,7 @@
 
 												<!-- Excerpt -->
 													<article class="box excerpt">
-														<a href="#" class="image left"><img src="images/pic06.jpg" alt="" /></a>
+														<a href="#" class="image left"><img src="<?php echo get_template_directory_uri(); ?>/images/pic06.jpg" alt="" /></a>
 														<div>
 															<header>
 																<span class="date">July 14</span>
@@ -165,7 +165,7 @@
 											<section class="box spotlight">
 												<h2 class="icon fa-file-alt">Spotlight</h2>
 												<article>
-													<a href="#" class="image featured"><img src="images/pic07.jpg" alt=""></a>
+													<a href="#" class="image featured"><img src="<?php echo get_template_directory_uri(); ?>/images/pic07.jpg" alt=""></a>
 													<header>
 														<h3><a href="#">Neural Implants</a></h3>
 														<p>The pros and cons. Mostly cons.</p>
