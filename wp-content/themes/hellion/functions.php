@@ -32,4 +32,51 @@ function hellion_register_menus() {
 }
 add_action('init', 'hellion_register_menus');
 
+
+// Register sidebar widgets for the footer area
+
+function hellion_widgets_init() {
+    register_sidebar(array(
+        'name'          => __('Footer Sidebar 1', 'hellion-theme'),
+        'id'            => 'footer-sidebar1',
+        'before_widget' => '<section class="widget %2$s">',
+        'after_widget'  => '</section>',
+        'before_title'  => '<h2 class="widget-title">',
+        'after_title'   => '</h2>',
+    ));
+    register_sidebar(array(
+        'name'          => __('Footer Sidebar 2', 'hellion-theme'),
+        'id'            => 'footer-sidebar2',
+        'before_widget' => '<section class="widget %2$s">',
+        'after_widget'  => '</section>',
+        'before_title'  => '<h2 class="widget-title">',
+        'after_title'   => '</h2>',
+    ));
+    register_sidebar(array(
+        'name'          => __('Footer Sidebar 3', 'hellion-theme'),
+        'id'            => 'footer-sidebar3',
+        'before_widget' => '<section class="widget %2$s">',
+        'after_widget'  => '</section>',
+        'before_title'  => '<h2 class="widget-title">',
+        'after_title'   => '</h2>',
+    ));
+    register_sidebar(array(
+        'name'          => __('Footer Sidebar 4', 'hellion-theme'),
+        'id'            => 'footer-sidebar4',
+        'before_widget' => '<section class="widget %2$s">',
+        'after_widget'  => '</section>',
+        'before_title'  => '<h2 class="widget-title">',
+        'after_title'   => '</h2>',
+    ));
+    register_sidebar(array(
+        'name'          => __('Footer Sidebar 5', 'hellion-theme'),
+        'id'            => 'footer-sidebar5',
+        'before_widget' => '<section class="widget %2$s">',
+        'after_widget'  => '</section>',
+        'before_title'  => '<h2 class="widget-title">',
+        'after_title'   => '</h2>',
+    ));
+}
+add_action('widgets_init', 'hellion_widgets_init');
+
 ?>
