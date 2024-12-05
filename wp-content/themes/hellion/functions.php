@@ -21,4 +21,15 @@ function hellion_enqueue_scripts() {
 
 add_action('wp_enqueue_scripts', 'hellion_enqueue_scripts');
 
+// Register Hellion theme menus
+
+function hellion_register_menus() {
+    register_nav_menus(
+        array(
+            'main-menu' => __('Hellion Main Menu', 'hellion-theme')
+        )
+    );
+}
+add_action('init', 'hellion_register_menus');
+
 ?>
