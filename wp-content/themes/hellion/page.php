@@ -38,58 +38,13 @@
 							<div class="container">
 								<div class="row">
 									<div class="col-8 col-12-medium">
-
-										<!-- Article list -->
-											<section class="box article-list">
-												<h2 class="icon fa-file-alt">Recent Posts</h2>
-
-												<!-- Excerpt -->
-													<article class="box excerpt">
-														<a href="#" class="image left"><img src="<?php echo get_template_directory_uri(); ?>/images/pic04.jpg" alt="" /></a>
-														<div>
-															<header>
-																<span class="date">July 24</span>
-																<h3><a href="#">Repairing a hyperspace window</a></h3>
-															</header>
-															<p>Phasellus quam turpis, feugiat sit amet ornare in, hendrerit in lectus
-															semper mod quisturpis nisi consequat etiam lorem. Phasellus quam turpis,
-															feugiat et sit amet ornare in, hendrerit in lectus semper mod quis eget mi dolore.</p>
-														</div>
-													</article>
-
-												<!-- Excerpt -->
-													<article class="box excerpt">
-														<a href="#" class="image left"><img src="<?php echo get_template_directory_uri(); ?>/images/pic05.jpg" alt="" /></a>
-														<div>
-															<header>
-																<span class="date">July 18</span>
-																<h3><a href="#">Adventuring with a knee injury</a></h3>
-															</header>
-															<p>Phasellus quam turpis, feugiat sit amet ornare in, hendrerit in lectus
-															semper mod quisturpis nisi consequat etiam lorem. Phasellus quam turpis,
-															feugiat et sit amet ornare in, hendrerit in lectus semper mod quis eget mi dolore.</p>
-														</div>
-													</article>
-
-												<!-- Excerpt -->
-													<article class="box excerpt">
-														<a href="#" class="image left"><img src="<?php echo get_template_directory_uri(); ?>/images/pic06.jpg" alt="" /></a>
-														<div>
-															<header>
-																<span class="date">July 14</span>
-																<h3><a href="#">Preparing for Y2K38</a></h3>
-															</header>
-															<p>Phasellus quam turpis, feugiat sit amet ornare in, hendrerit in lectus
-															semper mod quisturpis nisi consequat etiam lorem. Phasellus quam turpis,
-															feugiat et sit amet ornare in, hendrerit in lectus semper mod quis eget mi dolore.</p>
-														</div>
-													</article>
-
-											</section>
+                                        <!-- Article list -->
+                                    <?php get_template_part( 'template-parts/recent-posts' ); ?>
 									</div>
 									<div class="col-4 col-12-medium">
 
-										<!-- Spotlight -->
+                                    <?php get_template_part( 'template-parts/spotlight' ); ?>
+                                    		<!-- Spotlight 
 											<section class="box spotlight">
 												<h2 class="icon fa-file-alt">Spotlight</h2>
 												<article>
@@ -108,7 +63,7 @@
 														<a href="#" class="button alt icon solid fa-file-alt">Continue Reading</a>
 													</footer>
 												</article>
-											</section>
+											</section>-->
 
 									</div>
 								</div>
