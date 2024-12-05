@@ -8,7 +8,7 @@
 	<head>
 		<title>Hellion by HTML5 UP</title>
 		<meta charset="<?php bloginfo( 'charset' ); ?>" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
 	<?php wp_head(); ?>
 	</head>
     <body <?php body_class(  ); ?>>
