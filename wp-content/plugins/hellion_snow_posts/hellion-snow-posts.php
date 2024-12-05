@@ -7,15 +7,15 @@
  */
 
 // Enqueue the snow effect script for posts with the "christmas" tag
-function cse_enqueue_snow_effect() {
+function hellion_enqueue_snow_effect() {
     if (is_single() && has_tag('christmas')) {
         wp_enqueue_script('snowstorm', plugins_url('snowstorm.js', __FILE__), array(), null, true);
     }
 }
-add_action('wp_enqueue_scripts', 'cse_enqueue_snow_effect');
+add_action('wp_enqueue_scripts', 'hellion_enqueue_snow_effect');
 
 // Include the snow effect configuration in the footer
-function cse_include_snow_effect_script() {
+function hellion_include_snow_effect_script() {
     if (is_single() && has_tag('christmas')) {
         echo '<script type="text/javascript">
             snowStorm.autoStart = true;
@@ -24,20 +24,20 @@ function cse_include_snow_effect_script() {
         </script>';
     }
 }
-add_action('wp_footer', 'cse_include_snow_effect_script');
+add_action('wp_footer', 'hellion_include_snow_effect_script');
 
 // Add a Christmas tree icon to the titles of posts with the "christmas" tag
-function cse_add_christmas_tree_icon($title, $id) {
+function hellion_add_christmas_tree_icon($title, $id) {
     if (has_tag('christmas', $id)) {
         $icon = '<span class="christmas-tree-icon" style="color: green;">🎄</span> ';
         return $icon . $title;
     }
     return $title;
 }
-add_filter('the_title', 'cse_add_christmas_tree_icon', 10, 2);
+add_filter('the_title', 'hellion_add_christmas_tree_icon', 10, 2);
 
-// Add small elves to the content of posts with the "christmas" tag
-function cse_add_elves_to_content($content) {
+// Add small bearded elves to the content of posts with the "christmas" tag
+function hellion_add_elves_to_content($content) {
     if (has_tag('christmas') && is_singular('post')) {
         $elf_icon = '<span class="elf-icon" style="color: green;">🎅</span>';
         $paragraphs = explode('</p>', $content);
@@ -53,6 +53,6 @@ function cse_add_elves_to_content($content) {
     }
     return $content;
 }
-add_filter('the_content', 'cse_add_elves_to_content');
+add_filter('the_content', 'hellion_add_elves_to_content');
 
 ?>

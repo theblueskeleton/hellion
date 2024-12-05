@@ -33,48 +33,18 @@
 			            <div class="col-6 col-12-medium imp-medium">
 
 			                <!-- Links Footer 4 -->
-			                <section>
-			                    <h2><strong>ZeroFour</strong> by HTML5 UP</h2>
-			                    <p>Hi! This is <strong>ZeroFour</strong>, a free, fully responsive HTML5 site
-			                        template by <a href="http://twitter.com/ajlkn">AJ</a> for <a href="http://html5up.net/">HTML5 UP</a>.
-			                        It's <a href="http://html5up.net/license/">Creative Commons Attribution</a>
-			                        licensed so use it for any personal or commercial project (just credit us
-			                        for the design!).</p>
-			                    <a href="#" class="button alt icon solid fa-arrow-circle-right">Learn More</a>
-			                </section>
+			                <?php if (is_active_sidebar('footer-sidebar4')) : ?>
+			                    <div id="footer-sidebar4" class="widget-area" role="complementary">
+			                        <?php dynamic_sidebar('footer-sidebar4'); ?>
+			                    </div>
+			                <?php endif; ?>
 
 			                <!-- Contact -->
-			                <section>
-			                    <h2>Get in touch</h2>
-			                    <div>
-			                        <div class="row">
-			                            <div class="col-6 col-12-small">
-			                                <dl class="contact">
-			                                    <dt>Twitter</dt>
-			                                    <dd><a href="#">@untitled-corp</a></dd>
-			                                    <dt>Facebook</dt>
-			                                    <dd><a href="#">facebook.com/untitled</a></dd>
-			                                    <dt>WWW</dt>
-			                                    <dd><a href="#">untitled.tld</a></dd>
-			                                    <dt>Email</dt>
-			                                    <dd><a href="#">user@untitled.tld</a></dd>
-			                                </dl>
-			                            </div>
-			                            <div class="col-6 col-12-small">
-			                                <dl class="contact">
-			                                    <dt>Address</dt>
-			                                    <dd>
-			                                        1234 Fictional Rd<br />
-			                                        Nashville, TN 00000-0000<br />
-			                                        USA
-			                                    </dd>
-			                                    <dt>Phone</dt>
-			                                    <dd>(000) 000-0000</dd>
-			                                </dl>
-			                            </div>
-			                        </div>
+			                <?php if (is_active_sidebar('footer-sidebar5')) : ?>
+			                    <div id="footer-sidebar5" class="widget-area" role="complementary">
+			                        <?php dynamic_sidebar('footer-sidebar5'); ?>
 			                    </div>
-			                </section>
+			                <?php endif; ?>
 
 			            </div>
 			            <div class="col-12">

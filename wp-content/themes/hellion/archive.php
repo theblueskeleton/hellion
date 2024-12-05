@@ -15,7 +15,7 @@ get_header();
 
     <!-- Post Search Box -->
     <div class="post-search">
-        <?php get_search_form(); ?>
+    <?php get_search_form(); ?>
     </div>
 
         <?php if ( have_posts() ) : ?>
@@ -86,6 +86,4 @@ get_header();
     </div>
 </main><!-- #main -->
 
-<?php
-get_footer();
-?>
+<?php get_footer(); ?>
