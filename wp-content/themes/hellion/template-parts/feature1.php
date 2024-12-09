@@ -3,7 +3,7 @@
         <div class="col-12">
             <header class="first major">
                 <h2><?php _e('This is where the Index of the Hellion theme begins', 'hellion-theme'); ?></h2>
-                <p><?php _e('The HELLION theme turned out to be <strong>pretty awesome</strong> ...', 'hellion-theme'); ?></p>
+                <p><?php _e('The HELLION theme turned out <strong>pretty awesome</strong> ...', 'hellion-theme'); ?></p>
             </header>
         </div>
 
