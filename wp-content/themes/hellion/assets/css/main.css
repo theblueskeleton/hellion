@@ -2428,4 +2428,25 @@ input, select, textarea {
 					margin: 0 0 2em 0;
 				}
 
+
+				.review-item h3 a {
+					color: #0073aa;
+					text-decoration: none;
+				}
+				
+				.review-item h3 a:hover {
+					color: #005177;
+					text-decoration: underline;
+				}
+				
+				.review-content a {
+					color: #444;
+					text-decoration: none;
+				}
+				
+				.review-content a:hover {
+					color: #222;
+					text-decoration: underline;
+				}
+				
 	}
