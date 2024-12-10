@@ -17,3 +17,4 @@
         <?php get_template_part( 'template-parts/navbar' ); ?>
 
             </div>
+            </div>

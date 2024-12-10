@@ -7,4 +7,3 @@
                         <p>Does this statement make you want to click the big shiny button and find the secret page?</p>
                         <a href="<?php echo get_permalink(get_page_by_path('bazinga')); ?>" class="button large icon solid fa-check-circle">Yes it does</a>
                     </div>
-                    </div>

@@ -2,7 +2,7 @@
 
             <!-- Feature 1 -->
             <?php get_template_part( 'template-parts/banner' ); ?>
-
+            </div>
 			<!-- Main Wrapper -->
 				<div id="main-wrapper">
 					<div class="wrapper style1">
