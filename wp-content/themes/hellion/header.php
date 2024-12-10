@@ -15,3 +15,5 @@
     <?php wp_body_open(); ?>
 		<div id="page-wrapper">
         <?php get_template_part( 'template-parts/navbar' ); ?>
+
+            </div>
