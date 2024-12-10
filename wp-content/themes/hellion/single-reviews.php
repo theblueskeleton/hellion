@@ -13,6 +13,7 @@ get_header();
         <?php
         while ( have_posts() ) :
             the_post();
+            $reviewer_name = get_field('reviewer_name'); // Fetch ACF field
         ?>
             <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
                 <header class="entry-header">
@@ -22,6 +23,11 @@ get_header();
 
                 <div class="entry-content">
                     <?php the_content(); ?>
+                    <div class="review-details">
+                        <?php if ( $reviewer_name ) : ?>
+                            <p><strong>Reviewer Name:</strong> <?php echo esc_html( $reviewer_name ); ?></p>
+                        <?php endif; ?>
+                    </div>
                     <div class="review-rating">
                         <?php
                         $rating = get_post_meta( get_the_ID(), '_reviews_rating_key', true );
