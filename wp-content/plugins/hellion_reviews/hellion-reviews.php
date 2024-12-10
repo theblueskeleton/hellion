@@ -130,4 +130,74 @@ function hellion_handle_like_dislike() {
 }
 add_action('wp_ajax_like_dislike', 'hellion_handle_like_dislike');
 add_action('wp_ajax_nopriv_like_dislike', 'hellion_handle_like_dislike');
+
+
+// Register the [hellion_reviews] shortcode
+function hellion_reviews_shortcode($atts) {
+    // Parse shortcode attributes
+    $atts = shortcode_atts(
+        array(
+            'genre' => '', // Filter by genre (taxonomy)
+            'orderby' => 'date', // Default ordering by date
+            'order' => 'DESC', // Default order (Descending)
+            'count' => 5, // Number of reviews to display
+        ),
+        $atts,
+        'hellion_reviews'
+    );
+
+    // Build the query args
+    $args = array(
+        'post_type' => 'reviews',
+        'posts_per_page' => intval($atts['count']),
+        'orderby' => sanitize_text_field($atts['orderby']),
+        'order' => sanitize_text_field($atts['order']),
+    );
+
+    if (!empty($atts['genre'])) {
+        $args['tax_query'] = array(
+            array(
+                'taxonomy' => 'genre',
+                'field' => 'slug',
+                'terms' => sanitize_text_field($atts['genre']),
+            )
+        );
+    }
+
+    // Fetch the reviews
+    $query = new WP_Query($args);
+
+    ob_start(); // Start output buffering
+
+    if ($query->have_posts()) {
+        echo '<div class="hellion-reviews">';
+        while ($query->have_posts()) {
+            $query->the_post();
+            $likes = get_post_meta(get_the_ID(), '_review_likes', true) ?: 0;
+            $dislikes = get_post_meta(get_the_ID(), '_review_dislikes', true) ?: 0;
+            $genres = wp_get_post_terms(get_the_ID(), 'genre', array('fields' => 'names'));
+            ?>
+            <div class="review-item">
+                <h3><a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a></h3>
+                <div class="review-meta">
+                    <p><strong><?php _e('Likes:', 'textdomain'); ?></strong> <?php echo $likes; ?></p>
+                    <p><strong><?php _e('Dislikes:', 'textdomain'); ?></strong> <?php echo $dislikes; ?></p>
+                    <p><strong><?php _e('Genres:', 'textdomain'); ?></strong> <?php echo implode(', ', $genres); ?></p>
+                </div>
+                <div class="review-content">
+                    <?php the_excerpt(); ?>
+                </div>
+            </div>
+            <?php
+        }
+        echo '</div>';
+    } else {
+        echo '<p>' . __('No reviews found.', 'textdomain') . '</p>';
+    }
+
+    wp_reset_postdata(); // Restore global post data
+
+    return ob_get_clean(); // Return the buffered content
+}
+add_shortcode('hellion_reviews', 'hellion_reviews_shortcode');
 ?>
