@@ -7,7 +7,7 @@
 The theme fucntions enable post thumbnails, enqueue styles and scripts, register menus and widget areas, create a custom post type for testimonials with meta boxes for additional details, and customize the query for date and author archives.
 
 ## Plugins
-The Hellion Reviews plugin provides a comprehensive solution for managing and displaying reviews on a WordPress site. Here is a summary of its functionalities:
+The **Hellion Reviews** plugin provides a comprehensive solution for managing and displaying reviews on a WordPress site. Here is a summary of its functionalities:
 
 ### Custom Post Type:
 
@@ -49,7 +49,7 @@ The shortcode accepts attributes to filter reviews by genre, order them by date,
 
 ---	
 
-This Hellion Snow Posts plugin adds festive effects to WordPress posts tagged with "christmas." Here is a summary of its functionalities:
+This **Hellion Snow Posts** plugin adds festive effects to WordPress posts tagged with "christmas." Here is a summary of its functionalities:
 
 ### Snow Effect:
 
